@@ -1,22 +1,40 @@
+# BOUNCELESS Email Verification Script Documentation
 
-BOUNCELESS Email Verification Script Documentation
-==================================================
+<div class="container">
 
-Introduction:
+<div class="section">
+
+<div class="section-title">Introduction:</div>
+
+<div class="section-content">
 
 This script is for educational Purpose only
 
-  
-
 The Email Verification Script is a versatile Python tool designed to verify the validity of email addresses stored in a CSV file. It offers two modes of verification: DNS-based verification and SMTP-based verification. Never Get Bounced emails again. It's Free
 
-Requirements:
+</div>
 
-\- Python 3.x
+</div>
 
-\- \`dnspython\`, \`validate\_email\_address\`, \`csv\`, \`argparse\`, \`logging\`, and \`smtplib\` Python libraries.
+<div class="section">
 
-Usage:
+<div class="section-title">Requirements:</div>
+
+<div class="section-content">
+
+- Python 3.x
+
+- `dnspython`, `validate_email_address`, `csv`, `argparse`, `logging`, and `smtplib` Python libraries.
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">Usage:</div>
+
+<div class="section-content">
 
 1\. **Installation:**
 
@@ -35,36 +53,56 @@ Usage:
 
 3\. **Command-line Arguments:**
 
-Show Command-line Arguments
+<div class="toggle-btn" onclick="toggleCommandLine()">Show Command-line Arguments</div>
 
-\- `-f, --input_file`: Specifies the input CSV file path containing email addresses to be verified.
+<div id="commandLineArgs" style="display: none;">
 
-\- `-o, --output_file`: Specifies the output CSV file path for storing verification results.
+- `-f, --input_file`: Specifies the input CSV file path containing email addresses to be verified.
 
-\- `-m, --mode`: Specifies the verification mode. Choose between `dns` (DNS-based verification) or `smtp` (SMTP-based verification). Default mode is `dns`.
+- `-o, --output_file`: Specifies the output CSV file path for storing verification results.
 
-Example:
+- `-m, --mode`: Specifies the verification mode. Choose between `dns` (DNS-based verification) or `smtp` (SMTP-based verification). Default mode is `dns`.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">Example:</div>
+
+<div class="section-content">
 
 Suppose you have a CSV file named `emails.csv` containing a list of email addresses. To verify these email addresses using DNS and store the results in a file named `verification_results.csv`, you would run the following command:
 
     python checker.py -f emails.csv -o verification_results.csv -m dns
 
-Note:
+</div>
 
-\- Please ensure that you have appropriate permissions to read from the input CSV file and write to the output CSV file.
+</div>
 
-\- Use the appropriate verification mode (`dns` or `smtp`) based on your requirements and the constraints of the email verification process.
+<div class="section">
 
-\- SMTP verification may be resource-intensive and subject to limitations imposed by mail servers. Use it judiciously to avoid issues with server restrictions.
+<div class="section-title">Note:</div>
 
-  
+<div class="section-content">
 
-\- The best pattern is to run a DNS verification first then reclean the output list with the SMTP mode.
+- Please ensure that you have appropriate permissions to read from the input CSV file and write to the output CSV file.
 
-  
-  
+- Use the appropriate verification mode (`dns` or `smtp`) based on your requirements and the constraints of the email verification process.
+
+- SMTP verification may be resource-intensive and subject to limitations imposed by mail servers. Use it judiciously to avoid issues with server restrictions.
+
+- The best pattern is to run a DNS verification first then reclean the output list with the SMTP mode.
+
 [Github: @lordamdal](https://github.com/lordamdal)  
 [LinkedIn: @lordamdal | Ahmed Ali](https://www.linkedin.com/in/lordamdal/)  
-[Contact me](https://www.ntsoft.us/contact)
+[Contact me](https://www.ntsoft.us/contact)</div>
 
-function toggleCommandLine() { var commandLineArgs = document.getElementById('commandLineArgs'); commandLineArgs.style.display = (commandLineArgs.style.display === 'none') ? 'block' : 'none'; }
+</div>
+
+</div>
+
+<script>function toggleCommandLine() { var commandLineArgs = document.getElementById('commandLineArgs'); commandLineArgs.style.display = (commandLineArgs.style.display === 'none') ? 'block' : 'none'; }</script>
