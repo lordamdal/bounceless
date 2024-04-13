@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification Script Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section-content {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .command-line {
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .command-line pre {
+            margin: 0;
+        }
+
+        .toggle-btn {
+            cursor: pointer;
+            color: #007bff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>BOUNCELESS Email Verification Script Documentation</h1>
+    
+    <div class="container">
+        <div class="section">
+            <div class="section-title">Introduction:</div>
+            <div class="section-content">
+                <p>This script is for educational Purpose only</p><br>
+                <p>The Email Verification Script is a versatile Python tool designed to verify the validity of email addresses stored in a CSV file. It offers two modes of verification: DNS-based verification and SMTP-based verification. Never Get Bounced emails again. It's Free</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Requirements:</div>
+            <div class="section-content">
+                <p>- Python 3.x</p>
+                <p>- `dnspython`, `validate_email_address`, `csv`, `argparse`, `logging`, and `smtplib` Python libraries.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Usage:</div>
+            <div class="section-content">
+                <p>1. <strong>Installation:</strong></p>
+                <ul>
+                    <li>Ensure you have Python installed on your system. You can download and install Python from the official website: <a href="https://www.python.org/downloads/" target="_blank">Python Downloads</a>.</li>
+                    <li>Install the required Python libraries using pip or pip3:</li>
+                </ul>
+                <pre class="command-line"><code>pip3 install dnspython validate_email_address</code></pre>
+
+                <p>2. <strong>Running the Script:</strong></p>
+                <ul>
+                    <li>Open a terminal or command prompt.</li>
+                    <li>Navigate to the directory containing the script.</li>
+                    <li>Run the script using the following command:</li>
+                </ul>
+                <pre class="command-line"><code>python checker.py -f &lt;input_file_path&gt; -o &lt;output_file_path&gt; -m &lt;mode&gt;</code></pre>
+
+                <p>3. <strong>Command-line Arguments:</strong></p>
+                <div class="toggle-btn" onclick="toggleCommandLine()">Show Command-line Arguments</div>
+                <div id="commandLineArgs" style="display: none;">
+                    <p>- <code>-f, --input_file</code>: Specifies the input CSV file path containing email addresses to be verified.</p>
+                    <p>- <code>-o, --output_file</code>: Specifies the output CSV file path for storing verification results.</p>
+                    <p>- <code>-m, --mode</code>: Specifies the verification mode. Choose between <code>dns</code> (DNS-based verification) or <code>smtp</code> (SMTP-based verification). Default mode is <code>dns</code>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Example:</div>
+            <div class="section-content">
+                <p>Suppose you have a CSV file named <code>emails.csv</code> containing a list of email addresses. To verify these email addresses using DNS and store the results in a file named <code>verification_results.csv</code>, you would run the following command:</p>
+                <pre class="command-line"><code>python checker.py -f emails.csv -o verification_results.csv -m dns</code></pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Note:</div>
+            <div class="section-content">
+                <p>- Please ensure that you have appropriate permissions to read from the input CSV file and write to the output CSV file.</p>
+                <p>- Use the appropriate verification mode (<code>dns</code> or <code>smtp</code>) based on your requirements and the constraints of the email verification process.</p>
+                <p>- SMTP verification may be resource-intensive and subject to limitations imposed by mail servers. Use it judiciously to avoid issues with server restrictions.</p><br>
+                <p>- The best pattern is to run a DNS verification first then reclean the output list with the SMTP mode.</p> <br><br>
+                <a href="https://github.com/lordamdal">Github: @lordamdal</a> <br>
+                <a href="https://www.linkedin.com/in/lordamdal/">LinkedIn: @lordamdal | Ahmed Ali</a><br>
+                <a href="https://www.ntsoft.us/contact">Contact me</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCommandLine() {
+            var commandLineArgs = document.getElementById('commandLineArgs');
+            commandLineArgs.style.display = (commandLineArgs.style.display === 'none') ? 'block' : 'none';
+        }
+    </script>
+</body>
+
+</html>
