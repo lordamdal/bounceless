@@ -2,11 +2,13 @@
 
 ### Script Purpose and Functionality
 
-This script is designed to help you filter your email list effectively. Maintaining a positive reputation for your email server is crucial, and this tool assists in achieving that by identifying and removing invalid email addresses.
+This script is designed to help you filter your email list effectively. Maintaining a positive reputation for your email server is crucial, 
+and this tool assists in achieving that by identifying and removing invalid email addresses.
 
 ### Why It's Important
 
-Receiving bounce-backs due to misspelled email addresses can be frustrating and time-consuming to address. This script streamlines the process by detecting these incorrect addresses through domain DNS checks (e.g., example@domaintocheck.com). 
+Receiving bounce-backs due to misspelled email addresses can be frustrating and time-consuming to address. This script streamlines the process by 
+detecting these incorrect addresses through domain DNS checks (e.g., example@domaintocheck.com). 
 
 ### How It Works
 
@@ -25,9 +27,13 @@ The next update will include a feature that checks email profile photos to ident
 
 ### Compliance Reminder
 
-Always adhere to the CAN-SPAM Act of January 2004 when sending emails. This legislation sets the rules for commercial email, establishes requirements for commercial messages, and gives recipients the right to have you stop emailing them.
+Always adhere to the CAN-SPAM Act of January 2004 when sending emails. This legislation sets the rules for commercial email, establishes requirements 
+for commercial messages, and gives recipients the right to have you stop emailing them.
 
-The Email Verification Script is a versatile Python tool designed to verify the validity of email addresses stored in a CSV file. It offers two modes of verification: DNS-based verification and SMTP-based verification. Never get bounced emails again. It's free!
+The Email Verification Script is a versatile Python tool designed to verify the validity of email addresses stored in a CSV file. It offers two modes of verification: 
+DNS-based verification and SMTP-based verification. 
+Never get bounced emails again. 
+It's free!
 
 ## Requirements
 
@@ -64,7 +70,8 @@ python checker.py -f <input_file_path> -o <output_file_path> -m <mode>
 
 ## Example
 
-Suppose you have a CSV file named `emails.csv` containing a list of email addresses. To verify these email addresses using DNS and store the results in a file named `verification_results.csv`, you would run the following command:
+Suppose you have a CSV file named `emails.csv` containing a list of email addresses. To verify these email addresses using DNS and store the results in 
+  a file named `verification_results.csv`, you would run the following command:
 
 ```bash
 python checker.py -f emails.csv -o verification_results.csv -m dns
